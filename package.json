@@ -12,14 +12,16 @@
     "html-webpack-inline-source-plugin": "0.0.8",
     "html-webpack-plugin": "^2.28.0",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-merge": "^4.1.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mayo/s3-autoindex.git"
   },
   "scripts": {
-    "build": "webpack",
-    "server": "webpack-dev-server"
+    "build:dev": "webpack --env=dev --progress --profile --colors",
+    "build:prod": "webpack --env=prod --progress --profile --colors",
+    "server": "webpack-dev-server --env=dev"
   }
 }
