@@ -2,15 +2,24 @@
   "name": "s3-autoindex",
   "version": "1.0.0",
   "description": "Static website to generate directory listing for S3 buckets.",
-  "dependencies": {},
+  "dependencies": {
+    "mithril": "^1.1.1",
+    "moment": "^2.18.1"
+  },
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-uglify": "^2.1.0",
-    "grunt-contrib-watch": "^1.0.0"
+    "css-loader": "^0.28.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-inline-source-plugin": "0.0.8",
+    "html-webpack-plugin": "^2.28.0",
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sgtFloyd/s3-autoindex.git"
+    "url": "git+https://github.com/mayo/s3-autoindex.git"
+  },
+  "scripts": {
+    "build": "webpack",
+    "server": "webpack-dev-server"
   }
 }
