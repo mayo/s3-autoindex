@@ -1,7 +1,6 @@
 var m = require('mithril');
 
-var S3_BUCKET_HOST = 'static.oyam.ca.s3.amazonaws.com';
-//var S3_BUCKET_HOST = 'x';
+var config = require('./config.js')
 
 var s3_api = {
 
@@ -14,7 +13,7 @@ var s3_api = {
 
     if (marker) parts.push('marker=' + marker);
 
-    var url = '//' + S3_BUCKET_HOST + '/?' + parts.join('&');
+    var url = '//' + config.bucket_hostname + '/?' + parts.join('&');
 
     return m.request({
       method: "GET",
