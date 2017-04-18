@@ -5,6 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const _basedir = path.join(__dirname, '..');
 
+//ideally this would move to autoindex.js
+const octicons = require('octicons');
+
 module.exports = function() {
   return {
     entry: path.join(_basedir, "autoindex.js"),
@@ -37,6 +40,14 @@ module.exports = function() {
         minify: {
           collapseWhitespace: true,
         },
+
+        icons: [
+          octicons['chevron-down'],
+          octicons['chevron-up'],
+          octicons['file-directory'],
+          octicons['file-submodule'],
+          octicons['file'],
+        ],
       }),
       new HtmlWebpackInlineSourcePlugin(),
       new ExtractTextPlugin('styles.css')

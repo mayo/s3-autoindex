@@ -1,26 +1,58 @@
 
-body { font-family: "Anonymous Pro", "Monaco", "Courier New", Courier, monospace; }
-
-table { margin: 0, auto; border-collapse: separate; border-spacing: .2em; }
-thead a { color: black; text-decoration: none; }
-th:not(:first-child), td:not(:first-child) { padding-right: 1em; }
-thead th { text-align: left; }
-
-.sortable.active:after{
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body {
+  font-family: "Anonymous Pro", "Monaco", "Courier New", Courier, monospace;
+  font-size: 1em;
 }
 
-.sortable.active[data-dir="desc"]:after{content: " \f107";}
-.sortable.active[data-dir="asc"]:after{content: " \f106";}
+footer {
+  font-size: .8em;
+  margin-top: 1em;
+}
 
-.hidden { display: none !important; }
-.loading { font-size: .6em !important; margin-left: .6em; }
-.right-align { text-align: right; }
+table {
+  margin: 0, auto;
+  border-collapse: separate;
+  border-spacing: .2em;
+}
 
-.contents i.fa.file { color: rgba(60, 60, 60, 0.5); }
-.contents i.fa.dir { color: rgba(180, 180, 180, 0.5); }
+thead a {
+  color: black;
+  text-decoration: none;
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+  padding-right: 1em;
+}
+
+thead th {
+  text-align: left;
+}
+
+#sprites {
+  width:0;
+  height:0;
+  visibility:hidden;
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.right-align {
+  text-align: right;
+}
+
+th svg.octicon {
+  width: 12px;
+  height: 12px;
+  margin-left: .5em;
+}
+
+.contents svg.octicon {
+  fill: rgba(60, 60, 60, 0.5);
+  width: 16px;
+  height: 16px;
+}
 

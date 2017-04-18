@@ -9,6 +9,15 @@
     -->
   </head>
   <body>
+    <% if (htmlWebpackPlugin.options.icons) { %>
+    <svg xmlns="http://www.w3.org/2000/svg" id="sprites">
+      <% htmlWebpackPlugin.options.icons.forEach(function(icon) { %>
+      <symbol viewBox="<%= icon.viewbox %>" id="<%= icon.symbol %>">
+        <%= icon.path %>
+      <% }); %>
+    </svg>
+    <% } %>
+
     <section id="autoindex">
     </section>
 
@@ -26,7 +35,6 @@
     <!-- this gets inlined with webpack
     <script src="dist/bundle.js"></script>
     -->
-    <script src="https://use.fontawesome.com/11e7a91072.js"></script>
   </body>
 </html>
 

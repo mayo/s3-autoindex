@@ -4,7 +4,7 @@
   "description": "Static website to generate directory listing for S3 buckets.",
   "dependencies": {
     "mithril": "^1.1.1",
-    "moment": "^2.18.1"
+    "octicons": "^5.0.1"
   },
   "devDependencies": {
     "css-loader": "^0.28.0",
